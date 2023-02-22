@@ -1,0 +1,20 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery
+  security:
+    user:
+      name: admin
+      password: 1234
+
+# eureka \uAC00 \uD3EC\uD568\uB418\uBA74 eureka server \uB3C4 \uB4F1\uB85D\uB418\uBBC0\uB85C \uD574\uC81C\uD55C\uB2E4
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname:localhost}:8761/eureka
+  server:
+    max-node-read-timeout-ms: 10000
