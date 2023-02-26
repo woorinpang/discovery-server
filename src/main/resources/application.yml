@@ -7,7 +7,7 @@ spring:
   security:
     user:
       name: admin
-      password: 1234
+      password: admin
 
 # eureka \uAC00 \uD3EC\uD568\uB418\uBA74 eureka server \uB3C4 \uB4F1\uB85D\uB418\uBBC0\uB85C \uD574\uC81C\uD55C\uB2E4
 eureka:
