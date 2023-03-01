@@ -11,14 +11,15 @@ public class SecurityConfig {
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
-                .csrf().disable()
-                .headers().frameOptions().disable()
+                    .csrf().disable()
+                    .headers().frameOptions().disable()
                 .and()
-                .authorizeHttpRequests()
-                .requestMatchers("/actuator/?*").permitAll()
-                .anyRequest().authenticated()
+                    .authorizeHttpRequests()
+                    .requestMatchers("/actuator/?*").permitAll()
+                    .anyRequest().authenticated()
                 .and()
-                .httpBasic()
-                .and().build();
+                    .httpBasic()
+                .and()
+                .build();
     }
 }
