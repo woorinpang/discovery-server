@@ -1,4 +1,4 @@
-package com.woorinpang.discovery;
+package io.woorinpang.discovery;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

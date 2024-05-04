@@ -1,20 +1,16 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.2.4'
-    id 'io.spring.dependency-management' version '1.1.4'
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'io.spring.dependency-management' version "${springDependencyManagementVersion}"
 }
 
-group = 'com.woorinpang'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+group = "${projectGroup}"
+version = "${applicationVersion}"
+sourceCompatibility = project.javaVersion
 
 repositories {
     mavenCentral()
     maven { url 'https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates' }
-}
-
-ext {
-    set('springCloudVersion', "2023.0.1")
 }
 
 dependencies {
